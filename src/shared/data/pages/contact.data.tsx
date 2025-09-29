@@ -119,12 +119,12 @@ export const features2Contact: FeaturesProps = {
   },
   items: [
     {
-      title: 'Have a question?',
-      description: 'See our frequently asked questions',
+      title: 'Get Support',
+      description: 'Contact our support team directly',
       icon: IconHelp,
       callToAction: {
-        text: 'Go to FAQ page',
-        href: '/faqs',
+        text: 'Contact Support',
+        href: '/contact',
       },
     },
     {

@@ -3,7 +3,6 @@ import {
   IconBrandGithub,
   IconBrandInstagram,
   IconBrandTwitter,
-  IconChevronDown,
   IconRss,
 } from '@tabler/icons-react';
 import { AnnouncementProps, FooterProps, HeaderProps } from '../types';
@@ -24,40 +23,6 @@ export const announcementData: AnnouncementProps = {
 // Header data
 export const headerData: HeaderProps = {
   links: [
-    {
-      label: 'Pages',
-      icon: IconChevronDown,
-      links: [
-        {
-          label: 'Services',
-          href: '/services',
-        },
-        {
-          label: 'Pricing',
-          href: '/pricing',
-        },
-        {
-          label: 'About us',
-          href: '/about',
-        },
-        {
-          label: 'Contact us',
-          href: '/contact',
-        },
-        {
-          label: 'FAQs',
-          href: '/faqs',
-        },
-        {
-          label: 'Terms & Conditions',
-          href: '/terms',
-        },
-        {
-          label: 'Privacy Policy',
-          href: '/privacy',
-        },
-      ],
-    },
     {
       label: 'Blog',
       href: '/blog',
@@ -83,16 +48,7 @@ export const headerData: HeaderProps = {
 // Footer data
 export const footerData: FooterProps = {
   title: 'TailNext',
-  links: [
-    {
-      label: 'Terms & Conditions',
-      href: '/terms',
-    },
-    {
-      label: 'Privacy Policy',
-      href: '/privacy',
-    },
-  ],
+  links: [],
   columns: [
     {
       title: 'Product',
@@ -116,10 +72,6 @@ export const footerData: FooterProps = {
         {
           label: 'Customer stories',
           href: '/',
-        },
-        {
-          label: 'Pricing',
-          href: '/pricing',
         },
         {
           label: 'Resources',
@@ -226,16 +178,7 @@ export const footerData: FooterProps = {
 
 // Footer2 data
 export const footerData2: FooterProps = {
-  links: [
-    {
-      label: 'Terms & Conditions',
-      href: '/terms',
-    },
-    {
-      label: 'Privacy Policy',
-      href: '/privacy',
-    },
-  ],
+  links: [],
   columns: [
     {
       title: 'Address',
