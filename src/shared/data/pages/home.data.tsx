@@ -28,11 +28,9 @@ import {
   TeamProps,
   TestimonialsProps,
 } from '../../types';
-import heroImg from '~/assets/images/hero.jpg';
-import nextJsLogo from '~/assets/images/nextjs-logo.png';
-import reactLogo from '~/assets/images/react-logo.png';
-import tailwindCssLogo from '~/assets/images/tailwind-css-logo.png';
-import typescriptLogo from '~/assets/images/typescript-logo.png';
+import heroImg from '~/assets/images/hero.png';
+import aspencrgLogo from '~/assets/images/aspen-crg-logo.png';
+import bffLogo from '~/assets/images/bff-logo.png';
 import cameraFrontImg from '~/assets/images/camera-front.jpg';
 import cameraBackImg from '~/assets/images/camera-back.jpg';
 import gasImg from '~/assets/images/gas.jpg';
@@ -41,30 +39,29 @@ import gasImg from '~/assets/images/gas.jpg';
 export const heroHome: HeroProps = {
   title: (
     <>
-      Free template for <span className="hidden md:inline">starts a website using</span> <span>Next.js</span> +{' '}
-      <span className="sm:whitespace-nowrap">Tailwind CSS</span>
+      (AI)trophy - Saving the kids from AI
     </>
   ),
   subtitle: (
     <>
       <span className="hidden md:inline">
         <span className="font-semibold underline decoration-primary-600 decoration-wavy decoration-1 underline-offset-2">
-          TailNext
+          K-12
         </span>{' '}
-        is a production ready template to start your new website using <em>Next.js</em> + <em>Tailwind CSS</em>.
+        is always neglected.
       </span>{' '}
-      It has been designed following Best Practices, SEO, Accessibility, Dark Mode, great Page Speed, image
-      optimization.
+      we need to do something about it.
     </>
   ),
   callToAction: {
-    text: 'Get template',
+    text: 'See Curriculum',
     href: 'https://github.com/onwidget/tailnext',
-    icon: IconDownload,
+    icon: IconBulb,
     targetBlank: true,
   },
   callToAction2: {
-    text: 'Learn more',
+    text: 'Join Mailing List',
+    icon: IconMail,
     href: '/',
   },
   image: {
@@ -77,26 +74,18 @@ export const heroHome: HeroProps = {
 export const socialProofHome: SocialProofProps = {
   id: 'socialProof-on-home',
   hasBackground: false,
+  imageSize: 'w-32 md:w-48 lg:w-56',
+  containerClass: 'py-6 md:py-8 lg:py-10',
   images: [
     {
-      link: 'https://nextjs.org/',
-      src: nextJsLogo,
-      alt: 'NextJs Logo',
+      link: 'https://www.risinggenerations.org/',
+      src: aspencrgLogo,
+      alt: 'Aspen CRG Logo',
     },
     {
-      link: 'https://react.dev/',
-      src: reactLogo,
-      alt: 'React Logo',
-    },
-    {
-      link: 'https://tailwindcss.com/',
-      src: tailwindCssLogo,
-      alt: 'Tailwind CSS Logo',
-    },
-    {
-      link: 'https://www.typescriptlang.org/',
-      src: typescriptLogo,
-      alt: 'Typescript Logo',
+      link: 'https://www.bezosfamilyfoundation.org/story/introducing-the-center-for-rising-generations',
+      src: bffLogo,
+      alt: 'Bezo Foundation Logo',
     },
   ],
 };
