@@ -1,7 +1,69 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { IconMail, IconMapPin, IconPhoneCall } from '@tabler/icons-react';
 
 import Component from '~/components/widgets/Contact';
-import { contactHome as mockData } from '~/shared/data/pages/home.data';
+import { ContactProps } from '~/shared/types';
+
+// Mock data for Contact stories
+const mockData: ContactProps = {
+  header: {
+    title: 'Get in touch',
+    subtitle: 'We\'d love to hear from you. Send us a message and we\'ll respond as soon as possible.',
+    tagline: 'Contact',
+  },
+  content: 'Have questions about our services? Need support? We\'re here to help and would love to hear from you.',
+  items: [
+    {
+      title: 'Email us',
+      description: 'contact@aitrophy.com',
+      icon: IconMail,
+    },
+    {
+      title: 'Call us',
+      description: '+1 (555) 123-4567',
+      icon: IconPhoneCall,
+    },
+    {
+      title: 'Visit us',
+      description: ['123 Main Street', 'Suite 100', 'City, State 12345'],
+      icon: IconMapPin,
+    },
+  ],
+  form: {
+    title: 'Send us a message',
+    description: 'Fill out the form below and we\'ll get back to you as soon as possible.',
+    inputs: [
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Name',
+        placeholder: 'Your name',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+        placeholder: 'Your email',
+      },
+      {
+        type: 'text',
+        name: 'subject',
+        label: 'Subject',
+        placeholder: 'Subject',
+      },
+    ],
+    textarea: {
+      rows: 4,
+      name: 'message',
+      label: 'Message',
+      placeholder: 'Your message...',
+    },
+    btn: {
+      title: 'Send Message',
+      type: 'submit',
+    },
+  },
+};
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {

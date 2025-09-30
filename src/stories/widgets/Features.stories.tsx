@@ -1,8 +1,51 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Title, Subtitle, Description, Primary, Controls, Story, Stories } from '@storybook/blocks';
+import { IconRocket, IconShield, IconClock, IconBulb, IconSettings, IconUsers } from '@tabler/icons-react';
 
 import Component from '~/components/widgets/Features';
-import { featuresHome as mockData } from '~/shared/data/pages/home.data';
+import { FeaturesProps } from '~/shared/types';
+
+// Mock data for Features stories
+const mockData: FeaturesProps = {
+  header: {
+    title: 'Powerful Features',
+    subtitle: 'Discover everything our platform has to offer with these amazing features designed to boost your productivity.',
+    tagline: 'Features',
+  },
+  items: [
+    {
+      title: 'Lightning Fast',
+      description: 'Optimized performance ensures your applications run smoothly and efficiently.',
+      icon: IconRocket,
+    },
+    {
+      title: 'Secure by Design',
+      description: 'Built-in security features protect your data and ensure privacy.',
+      icon: IconShield,
+    },
+    {
+      title: '24/7 Support',
+      description: 'Round-the-clock customer support to help you when you need it most.',
+      icon: IconClock,
+    },
+    {
+      title: 'Innovative Solutions',
+      description: 'Cutting-edge technology that stays ahead of industry trends.',
+      icon: IconBulb,
+    },
+    {
+      title: 'Easy Configuration',
+      description: 'Simple setup and configuration tools that save you time.',
+      icon: IconSettings,
+    },
+    {
+      title: 'Team Collaboration',
+      description: 'Work seamlessly with your team using our collaboration features.',
+      icon: IconUsers,
+    },
+  ],
+  columns: 3,
+};
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {

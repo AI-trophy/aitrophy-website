@@ -1,7 +1,71 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import Component from '~/components/widgets/Pricing';
-import { pricingHome as mockData } from '~/shared/data/pages/home.data';
+import { PricingProps } from '~/shared/types';
+
+// Mock data for Pricing stories
+const mockData: PricingProps = {
+  header: {
+    title: 'Choose Your Plan',
+    subtitle: 'Select the perfect plan that fits your needs and budget.',
+    tagline: 'Pricing',
+  },
+  prices: [
+    {
+      title: 'Basic',
+      subtitle: 'Perfect for getting started',
+      price: 9,
+      period: 'per month',
+      items: [
+        { title: 'Up to 5 projects' },
+        { title: '10GB storage' },
+        { title: 'Email support' },
+        { title: 'Basic analytics' },
+      ],
+      callToAction: {
+        text: 'Get Started',
+        href: '#',
+      },
+    },
+    {
+      title: 'Pro',
+      subtitle: 'Best for growing teams',
+      price: 29,
+      period: 'per month',
+      items: [
+        { title: 'Unlimited projects' },
+        { title: '100GB storage' },
+        { title: 'Priority support' },
+        { title: 'Advanced analytics' },
+        { title: 'Team collaboration' },
+      ],
+      callToAction: {
+        text: 'Choose Pro',
+        href: '#',
+      },
+      hasRibbon: true,
+      ribbonTitle: 'Popular',
+    },
+    {
+      title: 'Enterprise',
+      subtitle: 'For large organizations',
+      price: 99,
+      period: 'per month',
+      items: [
+        { title: 'Unlimited everything' },
+        { title: '1TB storage' },
+        { title: '24/7 phone support' },
+        { title: 'Custom integrations' },
+        { title: 'Advanced security' },
+        { title: 'Dedicated account manager' },
+      ],
+      callToAction: {
+        text: 'Contact Sales',
+        href: '#',
+      },
+    },
+  ],
+};
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
