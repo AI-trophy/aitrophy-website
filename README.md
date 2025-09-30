@@ -48,7 +48,7 @@
 
 ## Getting started
 
-- Clone: `git clone https://github.com/onwidget/tailnext.git`
+- Clone: `git clone https://github.com/AI-trophy/aitrophy-website.git`
 - Enter in the directory: `cd tailnext`
 - Install dependencies: `npm install`
 - Start the development server: `npm run dev`
