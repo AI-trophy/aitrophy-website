@@ -110,40 +110,5 @@ export const contact2Contact: ContactProps = {
   },
 };
 
-// Feature2 data on Contact page *******************
-export const features2Contact: FeaturesProps = {
-  columns: 3,
-  header: {
-    title: 'Support Center',
-    subtitle: 'Looking for something in particular?',
-  },
-  items: [
-    {
-      title: 'Get Support',
-      description: 'Contact our support team directly',
-      icon: IconHelp,
-      callToAction: {
-        text: 'Contact Support',
-        href: '/contact',
-      },
-    },
-    {
-      title: 'Chat with us',
-      description: 'Live chat with our support team',
-      icon: IconMessages,
-      callToAction: {
-        text: 'Write to us',
-        href: '/',
-      },
-    },
-    {
-      title: 'Get help',
-      description: 'Speak to our team today',
-      icon: IconHeadset,
-      callToAction: {
-        text: 'Call us',
-        href: '/',
-      },
-    },
-  ],
-};
+
+
