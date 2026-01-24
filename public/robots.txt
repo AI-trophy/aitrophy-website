@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://tailnext.vercel.app/
+Host: https://aitrophy.vercel.app/
 
 # Sitemaps
-Sitemap: https://tailnext.vercel.app/sitemap.xml
+Sitemap: https://aitrophy.vercel.app/sitemap.xml
