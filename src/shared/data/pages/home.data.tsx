@@ -55,7 +55,7 @@ export const heroHome: HeroProps = {
   ),
   callToAction: {
     text: 'See Curriculum',
-    href: 'https://github.com/onwidget/tailnext',
+    href: 'https://github.com/AI-trophy/',
     icon: IconBulb,
     targetBlank: true,
   },
