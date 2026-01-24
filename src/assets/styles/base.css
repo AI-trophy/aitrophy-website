@@ -2,9 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply bg-slate-900 text-slate-300;
+  }
+}
+
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center rounded-md border border-gray-400 hover:border-gray-600 dark:border-slate-500 dark:hover:border-slate-700 bg-white dark:bg-transparent hover:bg-gray-100 dark:hover:bg-slate-700 text-center text-base text-gray-700 dark:text-slate-300 dark:hover:text-white font-medium leading-snug shadow-md hover:shadow-none transition duration-200 ease-in focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-blue-200 py-3 px-6 md:px-8;
+    /* Changed rounded-md to rounded-full for modern pill shape */
+    @apply inline-flex items-center justify-center rounded-full border border-gray-400 hover:border-gray-600 dark:border-slate-500 dark:hover:border-slate-700 bg-white dark:bg-transparent hover:bg-gray-100 dark:hover:bg-slate-700 text-center text-base text-gray-700 dark:text-slate-300 dark:hover:text-white font-medium leading-snug shadow-md hover:shadow-none transition duration-200 ease-in focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-blue-200 py-3 px-6 md:px-8;
   }
 
   .btn-ghost {
@@ -16,7 +23,8 @@
   }
 
   .card {
-    @apply rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow px-6 py-8 w-full;
+    /* Changed rounded-lg to rounded-2xl for friendlier, softer corners */
+    @apply rounded-2xl backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow px-6 py-8 w-full;
   }
 
   .ribbon {

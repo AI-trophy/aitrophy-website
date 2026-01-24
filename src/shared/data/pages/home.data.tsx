@@ -48,9 +48,9 @@ export const heroHome: HeroProps = {
         <span className="font-semibold underline decoration-primary-600 decoration-wavy decoration-1 underline-offset-2">
           K-12
         </span>{' '}
-        is always neglected.
+        are often neglected in the digital age.
       </span>{' '}
-      we need to do something about it.
+      we are doing something about it.
     </>
   ),
   callToAction: {
@@ -101,33 +101,32 @@ export const stepsHome: StepsProps = {
     alt: 'Steps image',
   },
   header: {
-    title: 'Sed ac magna sit amet risus tristique interdum.',
+    title: 'Workshop Workflow',
   },
   items: [
     {
-      title: 'Step 1',
+      title: 'The Dream',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla. Praesent placerat enim ut ex tincidunt vehicula. Fusce sit amet dui tellus.',
+        'Artificial intelligence provides the dream of democratized knowledge, no matter where you are or what connections you hold. We provide a vision of why you should care and the potential to answer any question with an expert-level first approximation.',
       icon: IconArrowDown,
     },
     {
-      title: 'Step 2',
+      title: 'Introduction to Large Language Models',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla.',
+        'While AI is broad, we focus on Large Language Models (LLMs) like ChatGPT. These are neural networks that use math and vast data to predict the next word. You will learn how they function, emphasizing that they are not sentient but predictive engines.',
       icon: IconArrowDown,
     },
     {
-      title: 'Step 3',
+      title: 'AI Safety and Atrophy',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla.',
+        'We discuss how to use AI responsibly and the promises it holds if used accordingly. The objective is to learn how to use LLMs well and understand how irresponsible usage can lead to cognitive decline.',
       icon: IconArrowDown,
     },
     {
-      title: 'Ready!',
+      title: 'Interactive Workshop',
     },
   ],
 };
-
 
 // Testimonials data on Home page *******************
 export const testimonialsHome: TestimonialsProps = {
@@ -172,44 +171,33 @@ export const testimonialsHome: TestimonialsProps = {
   ],
 };
 
+
 // FAQS data on Home page *******************
 export const faqs2Home: FAQsProps = {
   id: 'faqsTwo-on-home',
   hasBackground: false,
   header: {
     title: 'Frequently Asked Questions',
+    // Note: You may want to update this subtitle text as well, as it is still Latin.
     subtitle:
-      'Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque. Morbi tincidunt lacus nec tortor scelerisque pulvinar.',
+      'Common questions regarding our educational goals, curriculum expansion, and partnerships.',
     tagline: 'FAQS',
   },
   items: [
     {
-      title: 'What do I need to start?',
-      description: `Nunc mollis tempor quam, non fringilla elit sagittis in. Nullam vitae consectetur mi, a elementum arcu. Sed laoreet, ipsum et vehicula dignissim, leo orci pretium sem, ac condimentum tellus est quis ligula.`,
+      title: 'Why is it important to educate students about AI rather than strictly prohibiting it?',
+      description: `While AI has the power to democratize knowledge and open career pathways, without proper education, students may mistakenly view it as sentient or infallible. The organization believes that simply avoiding AI leads to overreliance and a lack of critical thinking. By teaching students what AI actually is, they can learn to use it as a powerful tool for the workforce while maintaining their problem-solving skills and academic integrity.`,
     },
     {
-      title: 'How to install the NextJS + Tailwind CSS template?',
-      description: `Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer eleifend vestibulum nisl in iaculis. Mauris dictum ac purus vestibulum auctor. Praesent imperdiet lectus et massa faucibus, quis viverra massa rhoncus.`,
+      title: 'How does the organization plan to reach students and expand its curriculum?',
+      description: `The initiative plans to develop extensive partnerships with public schools, libraries, and the New York City Department of Education to reach every child in NYC. Additionally, they will host workshops to gather data to refine their curriculum. This curriculum is intended to be readily accessible to anyone in the world who is curious or wants to educate others.`,
     },
     {
-      title: "What's something that you completely don't understand?",
-      description: `Mauris vitae eros a dui varius luctus. Suspendisse rutrum, sapien nec blandit bibendum, justo sapien sollicitudin erat, id aliquam sapien purus quis leo. Aliquam vulputate vestibulum consectetur.`,
-    },
-    {
-      title: "What's an example of when you changed your mind?",
-      description: `Nunc dapibus lacinia ipsum ut elementum. Integer in pretium sapien. Ut pretium nisl mauris, ut rutrum justo condimentum id. Etiam aliquet, arcu at iaculis laoreet, est arcu egestas sapien, eget sollicitudin odio orci et nunc.`,
-    },
-    {
-      title: 'What is something that you would really like to try again?',
-      description: `Duis in maximus mauris, id eleifend mauris. Nam a fringilla arcu. Curabitur convallis, tellus non aliquet rhoncus, lacus massa auctor eros, in interdum lectus augue sed augue. Fusce tempor ex id faucibus efficitur.`,
-    },
-    {
-      title: 'If you could only ask one question to each person you meet, what would that question be?',
-      description: `Nullam imperdiet sapien tincidunt erat dapibus faucibus. Vestibulum a sem nec lorem imperdiet scelerisque non sed lacus. Ut pulvinar id diam vitae auctor. Nam tempus, neque et elementum consectetur, ex ipsum pulvinar risus, vel sodales ligula tortor eu eros.`,
+      title: 'Which organizations represent your current key partners?',
+      description: `The initiative has established partnerships with several notable entities, including: Aspen Institution, Millennium High School, Tutor The Community, and Bezos Foundation.`,
     },
   ],
 };
-
 
 
 

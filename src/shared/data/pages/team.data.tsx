@@ -1,19 +1,6 @@
 import { IconBrandTwitter, IconBrandLinkedin, IconMail } from '@tabler/icons-react';
 import { HeroProps, TeamProps } from '~/shared/types';
 
-// Hero data on Team page *******************
-export const heroTeam: HeroProps = {
-  title: 'Meet Our Team',
-  subtitle: (
-    <>
-      <span className="hidden md:inline">{`We're a passionate group of professionals dedicated to delivering exceptional results.`}</span>{' '}
-      {`Our diverse team brings together expertise from various fields to create innovative solutions.`}
-    </>
-  ),
-  tagline: 'Our Team',
-};
-
-
 
 // Team data on Home page *******************
 export const teamHome: TeamProps = {

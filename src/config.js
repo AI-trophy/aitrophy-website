@@ -1,10 +1,10 @@
 module.exports.SITE = {
-  name: 'TailNext',
+  name: '(AI)Trophy',
 
-  origin: 'https://tailnext.vercel.app',
+  origin: 'https://aitrophy.vercel.app',
   basePathname: '/',
   trailingSlash: false,
 
-  title: 'TailNext — Your website with Next.js + Tailwind CSS',
-  description: 'TailNext is a free and ready to start template to make your website using Next.js and Tailwind CSS.',
+  title: '(AI)Trophy',
+  description: '(AI)Trophy is an open source curriculum and workshop for K-12 students.',
 };

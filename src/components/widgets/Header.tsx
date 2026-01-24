@@ -3,7 +3,7 @@
 import { useRef, useState } from 'react';
 import { IconRss } from '@tabler/icons-react';
 import { useOnClickOutside } from '~/hooks/useOnClickOutside';
-import ToggleDarkMode from '~/components/atoms/ToggleDarkMode';
+// ToggleDarkMode import removed
 import Link from 'next/link';
 import Logo from '~/components/atoms/Logo';
 import ToggleMenu from '../atoms/ToggleMenu';
@@ -12,7 +12,7 @@ import CTA from '../common/CTA';
 import { CallToActionType } from '~/shared/types';
 
 const Header = () => {
-  const { links, actions, isSticky, showToggleTheme, showRssFeed, position } = headerData;
+  const { links, actions, position, showRssFeed } = headerData;
 
   const ref = useRef(null);
 
@@ -57,19 +57,28 @@ const Header = () => {
 
   return (
     <header
-      className={`top-0 z-40 mx-auto w-full flex-none bg-white transition-all duration-100 ease-in dark:bg-slate-900 md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 ${
-        isSticky ? 'sticky' : 'relative'
-      } ${isToggleMenuOpen ? 'h-screen md:h-auto' : 'h-auto'}`}
+      className={`
+        /* Positioning: Floating & Centered */
+        fixed top-6 left-1/2 z-40 -translate-x-1/2
+        
+        /* Sizing & Spacing */
+        mx-auto w-[95%] md:w-auto md:max-w-5xl flex-none 
+        transition-all duration-300 ease-in-out
+        
+        /* Visuals: Glassmorphism, Borders, Shadows */
+        bg-white/80 dark:bg-slate-900/80 backdrop-blur-md 
+        border border-gray-200/50 dark:border-slate-700/50 
+        shadow-2xl
+
+        /* Shape Logic: Pill by default, Rounded Card if mobile menu is open */
+        ${isToggleMenuOpen ? 'h-[80vh] rounded-3xl overflow-y-auto' : 'h-auto rounded-full'}
+      `}
       id="header"
     >
-      <div className="mx-auto w-full max-w-7xl md:flex md:justify-between md:py-3.5 md:px-4">
-        <div
-          className={`flex justify-between py-3 px-3 md:py-0 md:px-0 ${
-            isToggleMenuOpen
-              ? 'md:bg-transparent md:dark:bg-transparent md:border-none bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-600'
-              : ''
-          }`}
-        >
+      <div className="mx-auto w-full px-4 md:flex md:justify-between md:items-center md:py-2">
+        
+        {/* Logo Section */}
+        <div className={`flex justify-between py-3 md:py-0 ${isToggleMenuOpen ? '' : ''}`}>
           <Link
             className="flex items-center"
             href="/"
@@ -83,23 +92,25 @@ const Header = () => {
             <ToggleMenu handleToggleMenuOnClick={handleToggleMenuOnClick} isToggleMenuOpen={isToggleMenuOpen} />
           </div>
         </div>
+
+        {/* Navigation Links */}
         <nav
-          className={`${isToggleMenuOpen ? 'block px-3' : 'hidden'} h-screen md:w-full ${
+          className={`${isToggleMenuOpen ? 'block' : 'hidden'} w-full md:w-auto ${
             position === 'right' ? 'justify-end' : position === 'left' ? 'justify-start' : 'justify-center'
-          } w-auto overflow-y-auto dark:text-slate-200 md:mx-5 md:flex md:h-auto md:items-center md:overflow-visible`}
+          } dark:text-slate-200 md:mx-6 md:flex md:items-center`}
           aria-label="Main navigation"
         >
           <ul
             ref={ref}
-            className="flex w-full flex-col mt-2 mb-36 md:m-0 text-xl md:w-auto md:flex-row md:self-center md:pt-0 md:text-base"
+            className="flex w-full flex-col mt-4 mb-10 md:m-0 text-xl md:w-auto md:flex-row md:items-center md:text-base md:gap-1"
           >
             {links &&
               links.map(({ label, href, icon: Icon, links }, index) => (
-                <li key={`item-link-${index}`} className={links?.length ? 'dropdown' : ''}>
+                <li key={`item-link-${index}`} className={links?.length ? 'dropdown relative' : 'relative'}>
                   {links && links.length ? (
                     <>
                       <button
-                        className="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-gray-900 dark:hover:text-white"
+                        className="flex items-center px-5 py-2 font-medium transition duration-150 ease-in-out hover:bg-gray-100 dark:hover:bg-slate-800 rounded-full text-gray-700 dark:text-slate-200"
                         onClick={() => handleDropdownOnClick(index)}
                       >
                         {label}{' '}
@@ -114,12 +125,12 @@ const Header = () => {
                       <ul
                         className={`${
                           isDropdownOpen[index] ? 'block' : 'md:hidden'
-                        } rounded pl-4 font-medium drop-shadow-xl md:absolute md:min-w-[200px] md:bg-white/90 md:pl-0 md:backdrop-blur-md dark:md:bg-slate-900/90 md:border md:border-gray-200 md:dark:border-slate-700`}
+                        } rounded-xl pl-4 font-medium drop-shadow-xl md:absolute md:top-full md:left-0 md:min-w-[200px] md:bg-white/90 md:pl-0 md:backdrop-blur-md dark:md:bg-slate-900/90 md:border md:border-gray-200 md:dark:border-slate-700 mt-2`}
                       >
                         {links.map(({ label: label2, href: href2 }, index2) => (
                           <li key={`item-link-${index2}`}>
                             <Link
-                              className="whitespace-no-wrap block py-2 px-5 first:rounded-t last:rounded-b dark:hover:bg-gray-700 md:hover:bg-gray-200"
+                              className="whitespace-no-wrap block py-2 px-5 first:rounded-t-xl last:rounded-b-xl dark:hover:bg-gray-700 md:hover:bg-gray-100"
                               href={href2 as string}
                               onClick={() =>
                                 isToggleMenuOpen ? handleToggleMenuOnClick() : handleCloseDropdownOnClick(index)
@@ -133,7 +144,7 @@ const Header = () => {
                     </>
                   ) : (
                     <Link
-                      className="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-gray-900 dark:hover:text-white"
+                      className="flex items-center px-5 py-2 font-medium transition duration-150 ease-in-out hover:bg-gray-100 dark:hover:bg-slate-800 rounded-full text-gray-700 dark:text-slate-200"
                       href={href as string}
                       onClick={() => (isToggleMenuOpen ? handleToggleMenuOnClick() : handleDropdownOnClick(index))}
                     >
@@ -144,16 +155,18 @@ const Header = () => {
               ))}
           </ul>
         </nav>
+
+        {/* Right Side Actions (Theme, RSS, CTA) */}
         <div
           className={`${
             isToggleMenuOpen ? 'block' : 'hidden'
-          } fixed bottom-0 left-0 w-full justify-end p-3 md:static md:mb-0 md:flex md:w-auto md:self-center md:p-0 md:bg-transparent md:dark:bg-transparent md:border-none bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-slate-600`}
+          } w-full justify-end p-3 md:flex md:w-auto md:self-center md:p-0`}
         >
-          <div className="flex w-full items-center justify-between md:w-auto">
-            {showToggleTheme && <ToggleDarkMode />}
+          <div className="flex w-full items-center justify-between md:w-auto md:gap-2">
+            {/* ToggleDarkMode removed from here */}
             {showRssFeed && (
               <Link
-                className="text-muted inline-flex items-center rounded-lg p-2.5 text-sm hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+                className="text-muted inline-flex items-center rounded-full p-2.5 text-sm hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
                 aria-label="RSS Feed"
                 href=""
               >
@@ -166,7 +179,7 @@ const Header = () => {
                   <CTA
                     key={`item-action-${index}`}
                     callToAction={callToAction as CallToActionType}
-                    linkClass="btn btn-primary m-1 py-2 px-5 text-sm font-semibold shadow-none md:px-6"
+                    linkClass="btn btn-primary py-2 px-5 text-sm font-semibold shadow-none md:px-6"
                   />
                 ))}
               </div>

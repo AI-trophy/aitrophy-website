@@ -11,7 +11,6 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <>
-      <Hero {...heroTeam} />
       <Team {...teamHome} />
     </>
   );
