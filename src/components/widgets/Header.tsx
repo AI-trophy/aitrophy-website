@@ -63,7 +63,6 @@ const Header = () => {
         
         /* Sizing & Spacing */
         mx-auto w-[95%] md:w-auto md:max-w-5xl flex-none 
-        transition-all duration-300 ease-in-out
         
         /* Visuals: Glassmorphism, Borders, Shadows */
         bg-white/80 dark:bg-slate-900/80 backdrop-blur-md 

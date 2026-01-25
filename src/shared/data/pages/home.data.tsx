@@ -39,7 +39,7 @@ import gasImg from '~/assets/images/gas.jpg';
 export const heroHome: HeroProps = {
   title: (
     <>
-      (AI)trophy - Saving the kids from AI
+      (AI)trophy - Empowering the kids with AI
     </>
   ),
   subtitle: (
@@ -50,7 +50,10 @@ export const heroHome: HeroProps = {
         </span>{' '}
         are often neglected in the digital age.
       </span>{' '}
-      we are doing something about it.
+      We are doing something about it and it's all{' '}
+      <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-600">
+        open source.
+      </span>
     </>
   ),
   callToAction: {
