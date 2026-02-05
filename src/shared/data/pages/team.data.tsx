@@ -42,7 +42,7 @@ export const teamHome: TeamProps = {
       name: 'Ryan Zhang',
       occupation: 'Advisor',
       image: {
-        src: 'https://images.unsplash.com/photo-1614583224978-f05ce51ef5fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2172&q=80',
+        src: 'https://rhyzhang.github.io/assets/img/me.jpg',
         alt: 'Ryan Zhang',
       },
       items: [
