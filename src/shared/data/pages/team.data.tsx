@@ -17,7 +17,7 @@ export const teamHome: TeamProps = {
       name: 'Russell Zhang',
       occupation: 'Founder',
       image: {
-        src: 'https://images.unsplash.com/photo-1637858868799-7f26a0640eb6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80',
+        src: 'https://raw.githubusercontent.com/AI-trophy/aitrophy-website/main/src/assets/images/russell.jpg',
         alt: 'Russell Zhang',
       },
       items: [
@@ -42,7 +42,7 @@ export const teamHome: TeamProps = {
       name: 'Ryan Zhang',
       occupation: 'Advisor',
       image: {
-        src: 'https://rhyzhang.github.io/assets/img/me.jpg',
+        src: 'https://raw.githubusercontent.com/Rhyzhang/rhyzhang.github.io/main/assets/img/me.jpg',
         alt: 'Ryan Zhang',
       },
       items: [
